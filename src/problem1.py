@@ -2,8 +2,8 @@
 Exam 1, problem 1.
 
 Authors: David Mutchler, Vibha Alangar, Valerie Galluzzi, Mark Hays,
-         Amanda Stouder, their colleagues and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         Amanda Stouder, their colleagues and Emily Wilcox.
+"""  # Done: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 import rosegraphics as rg
 
@@ -92,6 +92,20 @@ def problem1a(rectangle, square, thickness, window):
     # TODO: 2. Implement and test this function.  SEE THE PICTURES in the PDF!
     #          Tests have been written for you (above).
     # --------------------------------------------------------------------------
+    rectangle.attach_to(window)
+    square.attach_to(window)
+    thicknessline = thickness
+    color = rectangle.outline_color
+    line = rg.Line(rg.Point(square.center.x, square.center.y), rg.Point(rectangle.get_upper_left_corner().x + .5 *
+                                                                        rectangle.get_width(),
+                                                                        rectangle.get_upper_left_corner().y + .5 *
+                                                                        rectangle.get_height()))
+    # cannot figure out why test 3 is wrong and my other two tests are correct. I am okay with taking the partial credit
+    # because I have tried about 9 different solutions to try and get all 3 test to work
+    line.thickness = thicknessline
+    line.color = color
+    line.attach_to(window)
+    window.render()
 
 
 def run_test_problem1b():
@@ -152,9 +166,19 @@ def problem1b(point, win, width, height, color):
     # TODO: 3. Implement and test this function.  SEE THE PICTURES in the PDF!
     #          Tests have been written for you (above).
     # --------------------------------------------------------------------------
-
+    x = point.x
+    y = point.y
+    ellipse = rg.Ellipse(rg.Point(x, y), rg.Point(width, height))
+    color = ellipse.fill_color
+    ellipse.fill_color = color
+    ellipse.attach_to(win)
+    win.render()
+    # I am muy confused as to why my code is not working for all the tests and also why the color is not showing because
+    # I defined the color to = the given color
 
 # ------------------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
 # ------------------------------------------------------------------------------
+
+
 main()
