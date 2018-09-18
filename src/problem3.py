@@ -102,9 +102,24 @@ def problem3(point, length, delta, window):
     # TODO (continued):         and colors per the specified pattern.
     #          Tests have been written for you (above).
     # --------------------------------------------------------------------------
+    point.attach_to(window)
+    line1 = rg.Line(rg.Point(point.x, point.y), rg.Point(point.x, point.y + length))
+    line1.thickness = 3
+    line1.color = 'black'
+    line1.attach_to(window)
+    window.render()
+    line2 = rg.Line(rg.Point(point.y, point.x + delta), rg.Point(point.x, point.y + delta))
+    line2.thickness = 3
+    line2.color = 'magenta'
+    line2.attach_to(window)
+    window.render()
 
 
 # ----------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
 # ----------------------------------------------------------------------
+
+
 main()
+
+
