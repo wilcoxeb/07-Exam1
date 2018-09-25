@@ -98,8 +98,8 @@ def problem1a(rectangle, square, thickness, window):
     color = rectangle.outline_color
     line = rg.Line(rg.Point(square.center.x, square.center.y), rg.Point(rectangle.get_upper_left_corner().x + .5 *
                                                                         rectangle.get_width(),
-                                                                        rectangle.get_upper_left_corner().y + .5 *
-                                                                        rectangle.get_height()))
+                                                                        rectangle.get_upper_left_corner().y))
+
     # cannot figure out why test 3 is wrong and my other two tests are correct. I am okay with taking the partial credit
     # because I have tried about 9 different solutions to try and get all 3 test to work
     line.thickness = thicknessline
