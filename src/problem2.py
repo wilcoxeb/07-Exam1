@@ -146,7 +146,6 @@ def run_test_problem2b():
                                   format_string)
     actual = problem2b(13, 25, 5)
     print_actual_result_of_test(expected, actual, test_results)
-    return
 
     # Test 2:
     expected = 18 + 20 + 24  # which is 62
@@ -334,7 +333,7 @@ def problem2b(a, b, x):
          and the sum   16 + 18 + 20 + 24   is 78.
      """
     ############################################################################
-    # TODO: 4. Implement and test this function.  See the IMPORTANT NOTE below!
+    # Done: 4. Implement and test this function.  See the IMPORTANT NOTE below!
     #          Tests have been written for you (above).
     ############################################################################
     # TODO (continued): IMPORTANT NOTE:
@@ -344,7 +343,6 @@ def problem2b(a, b, x):
     ############################################################################
     total = 0
     for k in range((b - a) + 1):
-        print(k, number_of_factors(k + a), total, a + k)
         if number_of_factors(a + k) >= x:
             total = total + (a + k)
 
