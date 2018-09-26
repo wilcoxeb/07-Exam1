@@ -108,11 +108,7 @@ def problem3(point, length, delta, window):
     line1.color = 'black'
     line1.attach_to(window)
     window.render()
-    line2 = rg.Line(rg.Point(point.y, point.x + delta), rg.Point(point.x, point.y + delta))
-    line2.thickness = 3
-    line2.color = 'magenta'
-    line2.attach_to(window)
-    window.render()
+
 
 
 # ----------------------------------------------------------------------
