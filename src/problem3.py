@@ -108,9 +108,23 @@ def problem3(point, length, delta, window):
     line1.color = 'black'
     line1.attach_to(window)
     window.render()
-
-
-
+    line2 = rg.Line(rg.Point(point.x, point.y), rg.Point(point.x + length, point.y))
+    line2.thickness = 3
+    line2.color = 'magenta'
+    line2.attach_to(window)
+    window.render()
+    line3 = rg.Line(rg.Point(point.x, point.y + 20), rg.Point(point.x + length + 20, point.y + 20))
+    line3.thickness = 3
+    line3.color = 'cyan'
+    line3.attach_to(window)
+    window.render()
+    line4 = rg.Line(rg.Point(point.x, point.y + 40), rg.Point(point.x + length + 40, point.y + 40))
+    line4.thickness = 3
+    line4.color = 'spring green'
+    line4.attach_to(window)
+    window.render()
+    # understand that I need a for loop. It has the range of length divided by delta + 1 and that is how many lines are
+    #  produced.
 # ----------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
 # ----------------------------------------------------------------------
